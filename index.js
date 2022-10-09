@@ -9,7 +9,7 @@ function createDataset() {
     const ens = new ENS({ provider, network: "1" });
 
     fetchLeaderboard().then(async raw_data => {
-        new_data = raw_data
+        const new_data = raw_data
 
         for (var index = 0; index < new_data.length; index += 1) {
             const address = await getAddress(raw_data[index].ENS)
